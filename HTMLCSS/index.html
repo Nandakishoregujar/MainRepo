@@ -19,22 +19,25 @@
     <link href="https://fonts.googleapis.com/css?family=Crimson+Text&display=swap" rel="stylesheet"> 
 </head>
 <body> 
-        <div class="header">
+        <div class="header sticky-top" style="background-color: aqua;">
             <div class="brand-logo">
                <a href="#"> <img src="img/logo.png" style="width: 100px;">
                 <span>CORUS</span>
                 </a>
             </div>
-            <nav class="navbar navbar-default pull-right ">
+            <nav class="navbar navbar-default pull-right  ">
                 <ul class="text-center">
                     <li><a href="">About us</a></li>
-                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Services
-                        </button>
-                        <ul class="dropdown-menu">
-                          <li><a href="#">HTML</a></li>
-                          <li><a href="#">CSS</a></li>
-                          <li><a href="#">JavaScript</a></li>
+                    <li class="nav-item dropdown">
+                        <a id="navbarDropdown" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Services
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="width: 170%;">
+                          <li><a href="#" class="dropdown-item">Services Main 1</a></li>
+                          <li><a href="#" class="dropdown-item">Services Main 2</a></li>
+                          <li><a href="#" class="dropdown-item">Services Main 3</a></li>
+                          <li><a href="#" class="dropdown-item">Services Main 4</a></li>
                         </ul>
+                    </li>
                     <li><a href="">Blog</a></li>
                     <li><a href="">Contact</a></li>
                 </ul>
@@ -55,98 +58,81 @@
             
             <section class="block-2 ">
                 <div class="jumbotron">
-                    <h1>Our Some Features</h1>
-
-                    <div class="row">
-                        <div class="col-md-4 col-sm-6 col-xs-12">
-                            <div class="icon"> <i class="fa fa-mobile" aria-hidden="true"></i></div>
+                    <div class="row" >
+                        <div class="col-md-4 ">
+                            <div class="icon"> <i class="fa fa-mobile" ></i></div>
                             <h4>Optimized for all devices</h4>
                             <p>STRICT has been designed to be fully responsive on all devices.
                             </p>
                         </div>
 
-                        <div class="col-md-4 col-sm-6 col-xs-12">
-                            <div class="icon"> <i class="fa fa-paper-plane" aria-hidden="true"></i></div>
+                        <div class="col-md-4">
+                            <div class="icon"> <i class="fa fa-paper-plane" "></i></div>
                             <h4>Clean & Minimal Design</h4>
                             <p>This Multipurpose theme is especially created to be used for different projects.
                             </p>
                         </div>
 
-                        <div class="col-md-4 col-sm-6 col-xs-12">
-                           <div class="icon"> <i class="fa fa-bullhorn" aria-hidden="true"></i> </div>
+                        <div class="col-md-4">
+                           <div class="icon"> <i class="fa fa-bullhorn"></i> </div>
                             <h4>Font Awesome Icon</h4>
                             <p>This Multipurpose theme is especially created to be used for different projects.
                             </p>
                         </div>
 
-                    </div>
+                    </div class="row">
             </section>
-            <!--------------------------------------- SECTION 3 ------------------------------------------------------->
-             <!--<section class=" container block-3">
-                    <h2>Showcase Your work like a Pro</h2>
-                    <h5>Contact me if you like my work</h5>
-               <div class="image-box row"> -->
-   <!--                  <div class="col-md-4 col-sm-6 col-xs-12">
-                    <div class="img" style="background-image:url('img/image1.jpeg');"></div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="img" style="background-image:url('img/image3.jpeg');"></div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="img" style="background-image:url('img/image1.jpeg');"></div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="img" style="background-image:url('img/image3.jpeg');"></div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="img" style="background-image:url('img/image1.jpeg');"></div>
-                        </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="img" style="background-image:url('img/image3.jpeg');"></div>
-                    </div>
-                -->
-                <!--
-                        <div class="col-lg-3 col-md-4 col-6 image">
-                            <a href="img/image1.jpeg">
-                            <img src="img/image1.jpeg" alt="image1" class="img-fluid img-thumbnail">
-                            </a>
-                        </div> 
-                          <div class="col-lg-3 col-md-4 col-sm-6 image ">
-                              <a href="#" class="d-block  ">
-                                  <img src="img/image2.jpg" alt="image3" class="img-fluid ">
-                              </a>
 
-                          </div>
-                </div>
-            </section>
-        -->
 
         <section class="container block-3">
             <h2>Showcase Your work like a Pro</h2>
             <h5>Contact me if you like my work</h5>
-   <div class="container">
+    <div class="container">
 
    <div class="flex-container">
-     <div> <img class="image" src="img/pl.jpg" ></div>
-     <div><img src="img/p2.jpg" class="image"></div>
-     <div><img src="img/p3.jpg"  class="image"></div>
+    <div class="img-outer">
+     <div> <img class="image" src="img/pl.jpg" >
+        <div class="img-inner d-flex justify-content-center align-items-center">
+            <a href="#"><i class="fa fa-facebook pull-right" style="font-size: 35px; color: white;border: 2px solid white; padding: 5px; margin: 5px;" aria-hidden="true"></i></a>
+        </div>
+    </div>
+</div>
+     <div class="img-outer">
+         <img src="img/p2.jpg" class="image">
+        <div class="img-inner d-flex justify-content-center align-items-center">
+            <a href="#"><i class="fa fa-twitter pull-right" style="font-size: 35px; color: white;border: 2px solid white; padding: 5px; margin: 5px;" aria-hidden="true"></i></a>
+        </div>    
+    </div>
+     <div class="img-outer"><img src="img/p3.jpg"  class="image"><div class="img-inner d-flex justify-content-center align-items-center">
+        <a href="#"><i class="fa fa-linkedin pull-right" style="font-size: 35px; color: white;border: 2px solid white; padding: 5px; margin: 5px;" aria-hidden="true"></i></a>
+    </div></div>
+      <div class="img-outer"><img src="img/p4.jpg" class="image"><div class="img-inner d-flex justify-content-center align-items-center">
+        <a href="#"><i class="fa fa-google-plus pull-right" style="font-size: 35px; color: white;border: 2px solid white; padding: 5px; margin: 5px;" aria-hidden="true"></i></a>
+    </div></div>
+      <div class="img-outer"><img src="img/p5.jpg" class="image"><div class="img-inner d-flex justify-content-center align-items-center">
+        <a href="#"><i class="fa fa-facebook pull-right" style="font-size: 35px; color: white;border: 2px solid white; padding: 5px; margin: 5px;" aria-hidden="true"></i></a>
+    </div></div>
+      <div class="img-outer"><img src="img/p6.jpg" class="image"><div class="img-inner d-flex justify-content-center align-items-center">
+        <a href="#"><i class="fa fa-twitter pull-right" style="font-size: 35px; color: white;border: 2px solid white; padding: 5px; margin: 5px;" aria-hidden="true"></i></a>
+    </div></div>
+      <div class="img-outer"><img src="img/p7.jpg" class="image"><div class="img-inner d-flex justify-content-center align-items-center">
+        <a href="#"><i class="fa fa-linkedin pull-right" style="font-size: 35px; color: white;border: 2px solid white; padding: 5px; margin: 5px;" aria-hidden="true"></i></a>
+    </div></div>
     
-      <div><img src="img/p4.jpg" class="image"></div>
-      <div><img src="img/p5.jpg" class="image"></div>
-      <div><img src="img/p6.jpg" class="image"></div>
-      <div><img src="img/p7.jpg" class="image"></div>
-    
-      <div><img src="img/p8.jpg" class="image"></div>
+      <div class="img-outer"><img src="img/p8.jpg" class="image"><div class="img-inner d-flex justify-content-center align-items-center">
+        <a href="#"><i class="fa fa-google-plus pull-right" style="font-size: 35px; color: white;border: 2px solid white; padding: 5px; margin: 5px;" aria-hidden="true"></i></a>
+    </div></div>
      </div>
+    </div>
     </div>
  </section>
             <!--------------------------------------- SECTION 3 ------------------------------------------------------->
 
-            <section class="block-4 container" style="background-color: black;">
+            <div class="block-4 container-fluid nanda" style="position:relative">
                 <h1>Stay With us</h1>
                 <p>we ensure quality & support</p>
 
-                <form method="" action="" class="container">
+                <form method="" action="">
                      
                     <div class="form-group ">
                         <input type="text" class="form-control" placeholder="Full Name">
@@ -158,24 +144,24 @@
                         <textarea placeholder="Message" class="form-control" rows="4" cols="50" ></textarea>
                     </div>
                     <input type="checkbox" name="newsletter" ><label style="color: aliceblue;">&nbsp; Subscribe Now</label><br>
-                    <input type="submit" value="Send" class="btn btn-primary pull-right" >
+                    <div><input type="submit" value="Send" class="btn btn-primary pull-right" style= "background-color: red; position: absolute; top: 73%; bottom: 20%; left: 90%; right: 1"></div>
                 </form>
                                     
-            </section>
+            </div>
     
     
     
             <footer class="container-fluid jumbotron">
                 <div class=" container">
                     <div class="row">
-                        <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="col-md-6 ">
                             <p>Copyright &copy; 2020,STRICT</p> 
                         </div>
                         <div class="col-md-6 col-sm-6 col-xs-12 icons">
-                            <a href="#"><i class="fa fa-facebook pull-right" aria-hidden="true"></i></a>
-                            <a href="#"><i class="fa fa-twitter pull-right" aria-hidden="true"></i></a>
-                            <a href="#"> <i class="fa fa-linkedin pull-right" aria-hidden="true"></i></a>
-                            <a href="#"> <i class="fa fa-google-plus pull-right" aria-hidden="true"></i> </a>
+                            <a href="#"><i class="fa fa-facebook pull-right" ></i></a>
+                            <a href="#"><i class="fa fa-twitter pull-right" ></i></a>
+                            <a href="#"> <i class="fa fa-linkedin pull-right"></i></a>
+                            <a href="#"> <i class="fa fa-google-plus pull-right"></i> </a>
                         </div>
                     </div>
                 </div> 
