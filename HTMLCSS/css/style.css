@@ -198,8 +198,10 @@ nav ul li a:hover{
         
     }
 }
-      
-      
+
+.dropdown-item:hover{
+    background-color: aquamarine;
+}
 
 .flex-container:hover .image{
     background-color: skyblue;
