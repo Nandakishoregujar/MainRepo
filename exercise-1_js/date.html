@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <title>Task1</title>
+    <style>
+        h1{
+            display: inline;
+        }
+        .this{
+            margin-top: 40px;
+            margin-left: 500px;
+        }
+        #stopwatch{
+            font-size: 2rem;
+            font-weight: bolder;
+            margin-top: 50px;
+            margin-left: 50px;
+
+        }
+        .btn{
+            margin-top: 50px;
+            margin-left: 20px;        }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12" style="text-align: center; margin-top: 40px;">
+            <h1>Time&nbsp;</h1>
+            <h1 id="time"></h1>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <h1>Date&nbsp;</h1>
+            <h1 id="date"></h1>
+     
+ 
+    <div style="text-align:center;" >
+    <div id="stopwatch"></div>
+    <button id="st"  class="btn btn-primary" onclick="start()">Start&nbsp;</button> 
+    <button class="btn btn-primary" onclick="stop()">Stop&nbsp;</button> 
+    <button id="st2" class="btn btn-primary" onclick="start()">Resume&nbsp;</button> 
+    <button class="btn btn-primary" onclick="reset()">Reset&nbsp;</button> </div> 
+</div>
+</div>
+
+    <script>
+         let hour=0;
+          let minute=0;
+          let second=0;
+          let milisecond=0;
+          let timerid;
+          let h,m,s,d,ms;
+      var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+      setInterval(datetime,10);
+      function datetime()
+      {
+      var d = new Date();
+      document.getElementById("date").innerHTML = d.getDate()+": ";
+      document.getElementById("date").innerHTML += months[d.getMonth()]+": ";
+      document.getElementById("date").innerHTML += d.getFullYear();
+      document.getElementById("time").innerHTML = d.getHours()+"h ";
+      document.getElementById("time").innerHTML += d.getMinutes()+"m ";
+      document.getElementById("time").innerHTML += d.getSeconds()+"s";
+      
+      
+
+   }
+   document.getElementById("st2").disabled=true;
+
+
+   document.getElementById("stopwatch")
+              .innerHTML=`Stopwatch:&nbsp&nbsp00:00:00:00`;
+              milisecond+=1;
+          //stopwatch functions
+          function start(){
+              document.getElementById("st").disabled=true;
+              document.getElementById("st2").disabled=false;
+              s=check(second);
+              m=check(minute);
+              h=check(hour);
+              ms=check(milisecond);
+
+              document.getElementById("stopwatch")
+              .innerHTML=`Stopwatch:&nbsp&nbsp${h}:${m}:${s}:${ms}`;
+              milisecond+=1;
+              if(milisecond==100){second=second+1;
+              milisecond=0;}
+
+              else if(second==60){minute=minute+1;second=0;}
+
+              else if(minute==60 && second==59){hour=hour+1;
+              minute=0;}
+
+              timerid=setTimeout(start,10);
+          }       
+          function check(i){
+              if(i<10){i="0"+i;}
+              return i;
+          }
+          function stop(){
+                document.getElementById("st").disabled=false;
+                  document.getElementById("st").disabled=true;
+              clearTimeout(timerid);
+          }
+          function reset(){
+            document.getElementById("st").disabled=false;
+            document.getElementById("st2").disabled=true;
+              clearTimeout(timerid);
+              second=0;
+              minute=0;
+              hour=0;
+              milisecond=0;
+              document.getElementById("stopwatch")
+              .innerHTML=`Stopwatch:&nbsp &nbsp00:00:00:00`;
+
+                
+          }
+          
+
+ 
+    </script>
+</body>
+</html>

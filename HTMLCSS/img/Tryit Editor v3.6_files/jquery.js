@@ -1,0 +1,1 @@
+typeof btjsonpcallback1580904607932 ==="function" && btjsonpcallback1580904607932 ("21%nh");
