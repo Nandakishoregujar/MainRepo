@@ -1,1 +1,0 @@
-typeof btjsonpcallback1580992015779 ==="function" && btjsonpcallback1580992015779 ("17%jl");
