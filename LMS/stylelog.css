@@ -1,0 +1,100 @@
+body{
+    background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(pl.jpg);
+    background-size: cover;
+    background-position: initial;
+}
+
+.login-page{
+   
+    width: 360px;
+    padding: 10% 0 0;
+    margin: auto;
+}
+
+.form
+{
+    position: relative;
+    z-index:2 ;
+    background-color: rgb(198, 75, 214);
+    max-width: 800px;
+    margin: -2;
+    padding: 20px;
+    text-align: center;
+}
+
+.form input{
+    font-family: "Roboto",sans-serif ;
+    outline: 1;
+    background: #294adb;
+    width: 100%;
+    border: 10;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size:14px ;
+}
+.form button{
+    font-family: "Roboto",sans-serif ;
+    text-transform: uppercase;
+    outline: 0;
+    background: rgb(49, 62, 121);
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    columns: #618dc0;
+    font-size:14px ;
+
+}
+
+.form button:hover,.form button:active{
+    background: rgb(138, 233, 138);
+}
+
+.userNames{
+    font-size: 40px;
+    margin-left: 20px;
+}
+
+.courseName{
+    font-size: 24px;
+    margin-left: 40px;
+}
+
+.delButton{
+    margin-left: 200px;
+    background-color: rgb(214, 91, 116);
+}
+
+.addButton{
+    margin-left: 200px;
+    width: 50px;
+    background-color: rgb(178, 192, 56);
+}
+
+#Add{
+    font-size: 20px;
+    background-color: rgb(53, 230, 171);
+   
+    margin-left: 20px;
+}
+#Add:hover,#Add:active{
+    background: rgb(58, 179, 226);
+}
+
+
+.st{
+    color: rgb(238, 32, 4);
+    margin-left: 20px;
+}
+.show{
+    display: block;
+}
+
+.topics{
+    display: none;
+}
+
+.content{
+    margin-left: 30px;
+    color: rgb(87, 216, 216);
+}

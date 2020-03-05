@@ -1,0 +1,46 @@
+body {
+    background-color: wheat;
+}
+#form1 {
+    width: 400px;
+}
+.label1 {
+    display: inline-block;
+    width: 130px;
+    padding-bottom: 10px;
+}
+.container1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 450px;
+}
+#main {
+    background-color:whitesmoke;
+    padding: 50px;
+}
+
+#submit {
+    margin-left: 125px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+}
+
+input {
+    max-width: 100%;
+}
+
+#imgpad {
+    padding-bottom: 50px;
+    padding-left: 75px;
+}
+
+#imgsize {
+    width: 75%;
+}
+#signup{
+    align-content: center;
+    padding-top: 15px;
+}

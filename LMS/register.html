@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="register.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+ </head>
+  <body>
+      <div class="container1" id="main">
+        <div id="imgpad">
+          <h1>Sign up page</h1>
+        </div>
+            <form action="login.html" method="GET" id="form1">
+              <div class="label1">
+                <label>fullName</label>
+            </div>
+                <input type="text" placeholder="fullname" id="name" required><br>
+                <div class="label1">
+                    <label>password</label>
+                </div class="label1">
+                <input type="password" placeholder="password" id="passwd" required><br>
+                <div class="label1">
+                    <label>confirmPassword</label>
+                </div class="label1">
+                <input type="password" placeholder="confirmpassword" id="cpasswd" required><br>
+            <div>
+                <label id="submit">admin</label>
+                <input type="radio" id="ad"><br>
+                <label id="submit">student</label>
+                <input type="radio" id="st"><br>
+            </div>
+            <div id="submit">
+                <button id="su" type="submit" class="btn btn-primary">Signup</button><br>
+            </div>
+            <a id="submit" href="login.html">login page</a>
+
+            </form>
+           
+        </div>
+        <script src="register.js"></script>
+  </body>
+</html>
